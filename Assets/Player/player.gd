@@ -5,7 +5,7 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 # Multiplier for force applied when pushing objects
-const PUSH_FORCE = 0.5
+const PUSH_FORCE = 0.2
 
 @export_range(0.0, 1.0, 0.1) var mouse_sensitivity = 0.3
 
@@ -64,7 +64,7 @@ func _physics_process(delta: float) -> void:
 		var c = get_slide_collision(i)
 		if c.get_collider() is RigidBody3D:
 			var body : RigidBody3D = c.get_collider()
-			var speed = clamp(velocity.length(), 1.0, 10.0)
+			var speed = clamp(velocity.length(), 1.0, 3.0)
 			var push_direction = -c.get_normal();
 			body.apply_impulse((push_direction) * PUSH_FORCE * speed, (c.get_position() - body.get_global_position()))
 		

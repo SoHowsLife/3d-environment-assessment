@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bd2258iu3u14g" path="res://Assets/Buildings/House/House.tscn" id="5_nxtwi"]
 [ext_resource type="PackedScene" uid="uid://c3h80wg6rpj8" path="res://Assets/Buildings/House/Door.tscn" id="6_fogoc"]
 [ext_resource type="PackedScene" uid="uid://cq6a5jx8ajbhb" path="res://Assets/Mechanisms/Button/Button.tscn" id="7_0n6j5"]
+[ext_resource type="PackedScene" uid="uid://83ubue10q1dl" path="res://Assets/Props/Ball/Ball.tscn" id="9_cbka4"]
 
 [sub_resource type="Environment" id="Environment_vy7ed"]
 background_mode = 1
@@ -59,7 +60,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.77
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.475315, 7.5190697, 9.550002)
 
 [node name="Elevator" type="Node3D" parent="Stage/House" unique_id=771263325]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2999992, 0.25, 8.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2999992, 0.35, 8.9)
 
 [node name="Elevator" parent="Stage/House/Elevator" unique_id=1687933298 node_paths=PackedStringArray("pos0", "pos1") instance=ExtResource("4_8x3xv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
@@ -100,7 +101,7 @@ button_id = 2
 [node name="Player" parent="Entities" unique_id=167123483 instance=ExtResource("1_vy7ed")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.6729016, -0.0725013, 0.69281197)
 
-[node name="TestBox" parent="Entities" unique_id=1374893582 instance=ExtResource("1_j75pc")]
+[node name="TestBox" parent="Entities" unique_id=706295661 instance=ExtResource("1_j75pc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.949545, 3.63857, -6.3036036)
 
 [node name="Box" parent="Entities" unique_id=1148151749 instance=ExtResource("1_j75pc")]
@@ -120,3 +121,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.429386, 2.8911, -4.7055964
 
 [node name="TestLargeBox" parent="Entities" unique_id=88302729 instance=ExtResource("4_lvjc5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.77599, 2.8911, -6.860516)
+
+[node name="Ball" parent="Entities" unique_id=1033558632 instance=ExtResource("9_cbka4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.0939, 0.5, 2.3150043)
+
+[node name="Ball2" parent="Entities" unique_id=1977682094 instance=ExtResource("9_cbka4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.438168, 0.5, 2.4867945)
+
+[node name="Ball3" parent="Entities" unique_id=1436440576 instance=ExtResource("9_cbka4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.53326, 0.5, 4.3719997)
+
+[node name="Ball4" parent="Entities" unique_id=1608410466 instance=ExtResource("9_cbka4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6364584, 0.5000019, -5.1821423)

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://83ubue10q1dl"]
+
+[ext_resource type="Script" uid="uid://brvg1qtawdaxp" path="res://Assets/Props/prop.gd" id="1_x8j10"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ydpkx"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vkdro"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ntesg"]
+
+[node name="Ball" type="RigidBody3D" unique_id=1374893582]
+collision_layer = 4
+collision_mask = 22
+physics_material_override = SubResource("PhysicsMaterial_ydpkx")
+script = ExtResource("1_x8j10")
+is_holdable = true
+
+[node name="BallCollider" type="CollisionShape3D" parent="." unique_id=16518032]
+shape = SubResource("SphereShape3D_vkdro")
+
+[node name="BallMesh" type="MeshInstance3D" parent="." unique_id=1549260972]
+gi_mode = 2
+mesh = SubResource("SphereMesh_ntesg")
