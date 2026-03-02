@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bd2258iu3u14g"]
+
+[ext_resource type="PackedScene" uid="uid://duuohjx8b51cv" path="res://Assets/Buildings/House/HouseBuilding.tscn" id="1_h2usg"]
+[ext_resource type="PackedScene" uid="uid://c3h80wg6rpj8" path="res://Assets/Buildings/House/Door.tscn" id="2_pa085"]
+
+[node name="House" type="Node3D" unique_id=1461396530]
+
+[node name="House" parent="." unique_id=1730377806 instance=ExtResource("1_h2usg")]
+
+[node name="Door" parent="." unique_id=480299184 instance=ExtResource("2_pa085")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.95, 0, 1)

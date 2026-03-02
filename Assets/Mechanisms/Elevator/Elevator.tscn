@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dytdtha16kwnh"]
+
+[ext_resource type="Script" uid="uid://5djeg5efg4e1" path="res://Assets/Mechanisms/Elevator/elevator.gd" id="1_tvs5h"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3a3a6"]
+size = Vector3(2, 0.5, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tvs5h"]
+size = Vector3(2, 0.5, 2)
+
+[node name="Elevator" type="AnimatableBody3D" unique_id=2015601818]
+script = ExtResource("1_tvs5h")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1958278377]
+mesh = SubResource("BoxMesh_3a3a6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=957579147]
+shape = SubResource("BoxShape3D_tvs5h")

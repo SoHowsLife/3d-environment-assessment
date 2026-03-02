@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cq6a5jx8ajbhb"]
+
+[ext_resource type="Script" uid="uid://dkm8pfj5t0dcx" path="res://Assets/Mechanisms/Button/button.gd" id="1_cq84m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ucd5x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ucd5x"]
+albedo_color = Color(0.8980392, 0.043137256, 0.050980393, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ucd5x"]
+material = SubResource("StandardMaterial3D_ucd5x")
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cq84m"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cq84m"]
+material = SubResource("StandardMaterial3D_cq84m")
+size = Vector3(0.6, 0.6, 0.25)
+
+[node name="Button" type="Area3D" unique_id=204787923]
+collision_layer = 8
+collision_mask = 16
+script = ExtResource("1_cq84m")
+
+[node name="ActivationCollider" type="CollisionShape3D" parent="." unique_id=1393260459]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
+shape = SubResource("BoxShape3D_ucd5x")
+
+[node name="ButtonMesh" type="Node3D" parent="." unique_id=1598798549]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ButtonMesh" unique_id=1849046345]
+mesh = SubResource("BoxMesh_ucd5x")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ButtonMesh" unique_id=663341190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+mesh = SubResource("BoxMesh_cq84m")
