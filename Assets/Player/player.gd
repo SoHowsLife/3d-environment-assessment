@@ -36,6 +36,8 @@ func _input(event: InputEvent) -> void:
 	# Release held object
 	elif event.is_action_released("grab"):
 		release_object()
+	elif event.is_action_pressed("exit"):
+		get_tree().quit()
 	
 		
 func _physics_process(delta: float) -> void:
