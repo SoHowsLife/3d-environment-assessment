@@ -42,6 +42,8 @@ sky_mode = 1
 [node name="Stage" type="Node3D" parent="." unique_id=1859351581]
 
 [node name="Ground" type="StaticBody3D" parent="Stage" unique_id=761815712]
+collision_layer = 2
+collision_mask = 22
 
 [node name="GroundCollider" type="CollisionShape3D" parent="Stage/Ground" unique_id=843675387]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)

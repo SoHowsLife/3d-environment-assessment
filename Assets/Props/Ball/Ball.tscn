@@ -11,6 +11,7 @@
 [node name="Ball" type="RigidBody3D" unique_id=1374893582]
 collision_layer = 4
 collision_mask = 22
+mass = 4.0
 physics_material_override = SubResource("PhysicsMaterial_ydpkx")
 script = ExtResource("1_x8j10")
 is_holdable = true

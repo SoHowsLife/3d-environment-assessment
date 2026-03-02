@@ -2,7 +2,9 @@ class_name Prop
 extends RigidBody3D
 
 # The amount of force applied to held objects
-const HOLD_FORCE = 250
+const HOLD_FORCE = 200
+# Max force of a held object
+const MAX_FORCE = 400
 
 # Determine if the player can hold this object
 @export var is_holdable : bool = false
@@ -13,7 +15,7 @@ func _physics_process(delta: float) -> void:
 	# If player is holding this object, update the position of the object
 	if is_held:
 		var target_position = target.global_position
-		var speed = HOLD_FORCE * global_position.distance_to(target_position)
+		var speed = clamp(HOLD_FORCE * global_position.distance_to(target_position), 0.0, MAX_FORCE)
 		var direction = global_position.direction_to(target_position)
 		linear_velocity = Vector3.ZERO
 		apply_central_force(speed * direction)
@@ -32,5 +34,5 @@ func grab(player_target : Marker3D) -> bool:
 func release() -> void:
 	if is_holdable:
 		is_held = false
-		linear_velocity = Vector3.ZERO
+		#linear_velocity = Vector3.ZERO
 		gravity_scale = 1
